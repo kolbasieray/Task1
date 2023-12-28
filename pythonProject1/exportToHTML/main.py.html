@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #808080;}
+.s2 { color: #6a8759;}
+.s3 { color: #cc7832;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre>
+
+<span class="s1">#sayı al</span>
+
+<span class="s0">sayi_listesi = input(</span><span class="s2">&quot;Lütfen sayıları boşluk bırakarak girin: &quot;</span><span class="s0">)</span>
+<span class="s0">sayilar = [int(sayi) </span><span class="s3">for </span><span class="s0">sayi </span><span class="s3">in </span><span class="s0">sayi_listesi.split()]</span>
+
+
+<span class="s1"># Bubble Sort</span>
+<span class="s0">n = len(sayilar)</span>
+<span class="s3">for </span><span class="s0">i </span><span class="s3">in </span><span class="s0">range(n):</span>
+    <span class="s3">for </span><span class="s0">j </span><span class="s3">in </span><span class="s0">range(</span><span class="s4">0</span><span class="s3">, </span><span class="s0">n-i-</span><span class="s4">1</span><span class="s0">):</span>
+        <span class="s3">if </span><span class="s0">sayilar[j] &gt; sayilar[j+</span><span class="s4">1</span><span class="s0">]:</span>
+            <span class="s1"># Swap işlemi</span>
+            <span class="s0">sayilar[j]</span><span class="s3">, </span><span class="s0">sayilar[j+</span><span class="s4">1</span><span class="s0">] = sayilar[j+</span><span class="s4">1</span><span class="s0">]</span><span class="s3">, </span><span class="s0">sayilar[j]</span>
+
+<span class="s1"># Sıralanmış sayıları ekrana yazdır</span>
+<span class="s0">print(</span><span class="s2">&quot;Bubble Sort İle Sıralanmış Sayılar:&quot;</span><span class="s3">, </span><span class="s0">sayilar)</span>
+</pre>
+</body>
+</html>
