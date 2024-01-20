@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+</head>
+<body>
+    <h1>Gündem</h1>
+
+    <!-- Metin Giriş Kutusu -->
+    <ul>
+        {% for baslik in basliklar %}
+        <li><a href="{{ url_for('baslik_goster', baslik_id=baslik.id) }}">{{ baslik.baslik }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <!-- Form for Metin Girişi -->
+    <form action="{{ url_for('yazi_ekle') }}" method="post">
+        <div>
+            <label for="metinGirisi">Metin Girisi:</label><br>
+            <input type="text" id="metinGirisi" name="txtYazi">
+        </div>
+
+        <!-- Gönder Butonu -->
+        <div>
+            <button type="submit">Gönder</button>
+        </div>
+    </form>
+</body>
+</html>

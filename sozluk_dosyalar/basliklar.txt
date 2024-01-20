@@ -1,0 +1,4 @@
+1| Aralık Python bayramı
+2| Ücret Zamları
+3| Veri bilimi
+4| 123123
